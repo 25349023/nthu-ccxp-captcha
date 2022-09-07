@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://download.pytorch.org/whl/cu113"
+verify_ssl = true
+name = "pytorch-cu113"
+
+[packages]
+matplotlib = "*"
+torch = {version = "*", index = "pytorch-cu113"}
+torchvision = {version = "*", index = "pytorch-cu113"}
+notebook = "*"
+requests = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
