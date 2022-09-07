@@ -1,6 +1,8 @@
+import io
 import time
 from pathlib import Path
 
+import matplotlib.pyplot as plt
 import requests
 from bs4 import BeautifulSoup
 
@@ -14,9 +16,19 @@ def get_pwd_str() -> str:
     return img['src']
 
 
+def manually_label(src: str) -> str:
+    res = requests.get(BASE_URL + src)
+    f = io.BytesIO(res.content)
+    img = plt.imread(f)
+    plt.imshow(img)
+    plt.show()
+    label = input('input the numbers you just saw: ')
+    return label
+
+
 def collect_one(save_dir: Path, generate_count: int):
     src = get_pwd_str()
-    file_prefix = src.split('-')[-1]
+    file_prefix = manually_label(src)
 
     for i in range(generate_count):
         res = requests.get(BASE_URL + src)
@@ -27,7 +39,6 @@ def collect_one(save_dir: Path, generate_count: int):
 def collect_many(save_dir: Path, n_round: int, cnt_per_round: int):
     for r in range(n_round):
         collect_one(save_dir, cnt_per_round)
-        time.sleep(3)
 
 
 if __name__ == '__main__':
@@ -35,4 +46,4 @@ if __name__ == '__main__':
     if not dire.exists():
         dire.mkdir(parents=True)
 
-    collect_many(dire, 50, 50)
+    collect_many(dire, 42, 50)
