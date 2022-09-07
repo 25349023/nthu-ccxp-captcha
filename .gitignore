@@ -1,3 +1,4 @@
 /.idea
 /raw_data
 /data
+*.npy
