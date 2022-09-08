@@ -1,5 +1,4 @@
 import io
-import time
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -9,7 +8,7 @@ from bs4 import BeautifulSoup
 BASE_URL = 'https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/'
 
 
-def get_pwd_str() -> str:
+def get_img_src() -> str:
     res = requests.get(BASE_URL)
     soup = BeautifulSoup(res.text, 'lxml')
     img = soup.select_one('.input_box + img')
@@ -27,7 +26,7 @@ def manually_label(src: str) -> str:
 
 
 def collect_one(save_dir: Path, generate_count: int):
-    src = get_pwd_str()
+    src = get_img_src()
     file_prefix = manually_label(src)
 
     for i in range(generate_count):
