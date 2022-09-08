@@ -17,6 +17,7 @@ requests = "*"
 beautifulsoup4 = "*"
 lxml = "*"
 jupyter = "*"
+tqdm = "*"
 
 [dev-packages]
 
