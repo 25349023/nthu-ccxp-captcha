@@ -33,7 +33,7 @@ def generate_dataset_from(src: pathlib.Path):
     images, output_labels = zipped_pairs
 
     images = np.array(images)
-    output_labels = np.array(output_labels)
+    output_labels = np.array(output_labels, dtype=np.int64)
     print(images.shape, output_labels.shape)
 
     np.save('images.npy', images)
