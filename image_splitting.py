@@ -1,4 +1,5 @@
 import pathlib
+import random
 from typing import List, Tuple
 
 import matplotlib.pyplot as plt
@@ -15,22 +16,26 @@ def split(raw_img: np.ndarray, label: str, digits: int = 6) -> List[Tuple[np.nda
 
 
 def generate_dataset_from(src: pathlib.Path):
-    images = []
-    output_labels = []
+    img_pairs = []
 
     for path in src.glob('*.png'):
         label = path.stem[:6]
         raw_img = plt.imread(path)
 
         for (img, lbl) in split(raw_img, label):
-            images.append(img[..., :3])
-            output_labels.append(lbl)
+            img_pairs.append((img[..., :3], lbl))
 
-            if len(images) % 500 == 0:
-                print(len(images), 'Proceeded.')
+            if len(img_pairs) % 500 == 0:
+                print(len(img_pairs), 'Proceeded.')
+
+    random.shuffle(img_pairs)
+    zipped_pairs = zip(*img_pairs)
+    images, output_labels = zipped_pairs
 
     images = np.array(images)
-    output_labels = np.array(output_labels, dtype=int)
+    output_labels = np.array(output_labels)
+    print(images.shape, output_labels.shape)
+
     np.save('images.npy', images)
     np.save('labels.npy', output_labels)
 
