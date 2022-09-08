@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c2752c29473e7302457ab28b45f6f86c22a186a31b99e351d37c467f7a482672"
+            "sha256": "319f0fe77b2e56421480091b2c260bee1cac702cf97bb987be0221610cbb3f52"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -312,6 +312,14 @@
             ],
             "version": "==0.2.0"
         },
+        "ipywidgets": {
+            "hashes": [
+                "sha256:08cb75c6e0a96836147cbfdc55580ae04d13e05d26ffbc377b4e1c68baa28b1f",
+                "sha256:1dc3dd4ee19ded045ea7c86eb273033d238d8e43f9e7872c52d092683f263891"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==8.0.2"
+        },
         "jedi": {
             "hashes": [
                 "sha256:637c9635fcf47945ceb91cd7f320234a7be540ded6f3e99a50cb6febdfd1ba8d",
@@ -336,6 +344,15 @@
             "markers": "python_version >= '3.7'",
             "version": "==4.15.0"
         },
+        "jupyter": {
+            "hashes": [
+                "sha256:3e1f86076bbb7c8c207829390305a2b1fe836d471ed54be66a3b8c41e7f46cc7",
+                "sha256:5b290f93b98ffbc21c0c7e749f054b3267782166d72fa5e3ed1ed4eaf34a2b78",
+                "sha256:d9dc4b3318f310e34c82951ea5d6683f67bed7def4b259fafbfe4f1beb1d8e5f"
+            ],
+            "index": "pypi",
+            "version": "==1.0.0"
+        },
         "jupyter-client": {
             "hashes": [
                 "sha256:3c58466a1b8d55dba0bf3ce0834e4f5b7760baf98d1d73db0add6f19de9ecd1d",
@@ -343,6 +360,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==7.3.5"
+        },
+        "jupyter-console": {
+            "hashes": [
+                "sha256:172f5335e31d600df61613a97b7f0352f2c8250bbd1092ef2d658f77249f89fb",
+                "sha256:756df7f4f60c986e7bc0172e4493d3830a7e6e75c08750bbe59c0a5403ad6dee"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==6.4.4"
         },
         "jupyter-core": {
             "hashes": [
@@ -359,6 +384,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==0.2.2"
+        },
+        "jupyterlab-widgets": {
+            "hashes": [
+                "sha256:6aa1bc0045470d54d76b9c0b7609a8f8f0087573bae25700a370c11f82cb38c8",
+                "sha256:c767181399b4ca8b647befe2d913b1260f51bf9d8ef9b7a14632d4c1a7b536bd"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==3.0.3"
         },
         "kiwisolver": {
             "hashes": [
@@ -1018,6 +1051,22 @@
             "markers": "python_version >= '3.6'",
             "version": "==23.2.1"
         },
+        "qtconsole": {
+            "hashes": [
+                "sha256:8eadf012e83ab018295803c247c6ab7eacd3d5ab1e1d88a0f37fdcfdab9295a3",
+                "sha256:c29d24464f57cdbaa17d6f6060be6e6d5e29126e7feb57eebc1747433382b3d1"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==5.3.2"
+        },
+        "qtpy": {
+            "hashes": [
+                "sha256:d283cfba378b0dbe36a55b68aea8ee2f86cd6ccf06c023af25bbe705ffbb29e5",
+                "sha256:d85f1b121f24a41ad26c55c446e66abdb7c528839f8c4f11f156ec4541903914"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==2.2.0"
+        },
         "requests": {
             "hashes": [
                 "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983",
@@ -1140,6 +1189,14 @@
                 "sha256:b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"
             ],
             "version": "==0.5.1"
+        },
+        "widgetsnbextension": {
+            "hashes": [
+                "sha256:34824864c062b0b3030ad78210db5ae6a3960dfb61d5b27562d6631774de0286",
+                "sha256:7f3b0de8fda692d31ef03743b598620e31c2668b835edbd3962d080ccecf31eb"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==4.0.3"
         },
         "zipp": {
             "hashes": [

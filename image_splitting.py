@@ -1,8 +1,8 @@
 import pathlib
+from typing import List, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
-from typing import List, Tuple
 
 
 def split(raw_img: np.ndarray, label: str, digits: int = 6) -> List[Tuple[np.ndarray, int]]:
@@ -14,8 +14,8 @@ def split(raw_img: np.ndarray, label: str, digits: int = 6) -> List[Tuple[np.nda
             for i, lbl in enumerate(label)]
 
 
-def generate_dataset_from(src: pathlib.Path, dest: pathlib.Path):
-    file_idx = 0
+def generate_dataset_from(src: pathlib.Path):
+    images = []
     output_labels = []
 
     for path in src.glob('*.png'):
@@ -23,25 +23,22 @@ def generate_dataset_from(src: pathlib.Path, dest: pathlib.Path):
         raw_img = plt.imread(path)
 
         for (img, lbl) in split(raw_img, label):
-            plt.imsave(dest / f'img_{file_idx}.png', img)
+            images.append(img[..., :3])
             output_labels.append(lbl)
-            file_idx += 1
 
-            if file_idx % 500 == 0:
-                print(file_idx, 'Proceeded.')
+            if len(images) % 500 == 0:
+                print(len(images), 'Proceeded.')
 
+    images = np.array(images)
     output_labels = np.array(output_labels, dtype=int)
+    np.save('images.npy', images)
     np.save('labels.npy', output_labels)
 
 
 if __name__ == '__main__':
     src_dir = pathlib.Path('./raw_data/')
-    dest_dir = pathlib.Path('./data/')
 
     if not src_dir.exists():
         raise OSError(f"Source directory {src_dir} not found.")
 
-    if not dest_dir.exists():
-        dest_dir.mkdir(parents=True)
-
-    generate_dataset_from(src_dir, dest_dir)
+    generate_dataset_from(src_dir)

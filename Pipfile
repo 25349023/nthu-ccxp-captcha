@@ -16,6 +16,7 @@ notebook = "*"
 requests = "*"
 beautifulsoup4 = "*"
 lxml = "*"
+jupyter = "*"
 
 [dev-packages]
 
