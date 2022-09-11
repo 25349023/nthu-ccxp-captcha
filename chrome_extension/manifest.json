@@ -1,12 +1,12 @@
 {
   "name": "NTHU CCXP Decaptcha",
   "description": "Decaptcha for NTHU Academic Information Systems",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "manifest_version": 3,
   "content_scripts": [
     {
       "matches": [
-        "https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/"
+        "*://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/*"
       ],
       "js": [
         "content-script.js"

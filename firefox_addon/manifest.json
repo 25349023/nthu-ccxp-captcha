@@ -1,12 +1,12 @@
 {
   "name": "NTHU CCXP Decaptcha",
   "description": "Decaptcha for NTHU Academic Information Systems",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "manifest_version": 2,
   "content_scripts": [
     {
       "matches": [
-        "https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/"
+        "*://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/*"
       ],
       "js": [
         "content-script.js"
@@ -19,6 +19,7 @@
     "128": "/icons/ccxp_decaptcha@128.png"
   },
   "permissions": [
-    "*://7s7izxcb32.execute-api.us-east-1.amazonaws.com/*"
+    "*://7s7izxcb32.execute-api.us-east-1.amazonaws.com/*",
+    "*://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/*"
   ]
 }
