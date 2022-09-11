@@ -18,6 +18,7 @@ beautifulsoup4 = "*"
 lxml = "*"
 jupyter = "*"
 tqdm = "*"
+flask = "*"
 
 [dev-packages]
 
