@@ -15,11 +15,11 @@ The extension does not collect any personal data.
 
 ### Data Collection
 
-- Download and manually label the images (50)
+- Download and manually label the images
 
 ### Data Preprocessing
 
-- Split the image into six patches of equal width.
+- Split the image into six patches of equal width
 
 ### Model
 

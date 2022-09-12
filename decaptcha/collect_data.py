@@ -45,4 +45,4 @@ if __name__ == '__main__':
     if not dire.exists():
         dire.mkdir(parents=True)
 
-    collect_many(dire, 42, 50)
+    collect_many(dire, 50, 50)
