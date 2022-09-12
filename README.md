@@ -4,7 +4,7 @@ Automatically fill in the captcha on the NTHU Academic Information Systems.
 
 ## Download & Installation
 
-- [Firefox Addon]()
+- [Firefox Addon](https://addons.mozilla.org/zh-TW/firefox/addon/nthu-ccxp-decaptcha/)
 - [Chrome Extension]()
 
 ## Privacy Policy
