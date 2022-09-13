@@ -1,6 +1,6 @@
 /.idea
-/raw_data
-/data
+raw_data/
+data/
 *.npy
 *.ipynb
 *.zip
