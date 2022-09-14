@@ -4,12 +4,12 @@ Automatically fill in the captcha on the NTHU Academic Information Systems.
 
 ## Download & Installation
 
-- [Firefox Addon](https://addons.mozilla.org/zh-TW/firefox/addon/nthu-ccxp-decaptcha/)
-- [Chrome Extension]()
+- [Firefox Add-on](https://addons.mozilla.org/zh-TW/firefox/addon/nthu-ccxp-decaptcha/)
+- [Chrome Extension](https://chrome.google.com/webstore/detail/nthu-ccxp-decaptcha/hpbhebpkmhpeoomcmdmlmhlclhbbdjho?hl=zh-TW)
 
 ## Privacy Policy
 
-The extension does not collect any personal data.
+This extension does not collect any personal data.
 
 ## Implementation Details
 
@@ -32,5 +32,5 @@ The extension does not collect any personal data.
 ### Extension
 
 - Download the captcha image
-- Transform to an Array of each byte
+- Transform to an Array of bytes
 - JSON.stringify the array and pass it to the API
