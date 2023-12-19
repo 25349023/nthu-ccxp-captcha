@@ -2,7 +2,7 @@ const CCXP_URL = "https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/";
 const SERVER_URL = "https://7s7izxcb32.execute-api.us-east-1.amazonaws.com/decaptcha";
 
 function get_src(e) {
-    let img = document.querySelector(".input_box + img");
+    let img = document.querySelector(".inputtext ~ img");
     if (img === null) {
         return null;
     }
@@ -33,7 +33,7 @@ function decaptcha(e) {
         return;
     }
 
-    let input_box = document.querySelector(".input_box[name=passwd2]");
+    let input_box = document.querySelector(".inputtext[name=passwd2]");
     download_img(src)
         .then(img => {
             fetch(SERVER_URL, {
