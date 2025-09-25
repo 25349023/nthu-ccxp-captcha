@@ -1,5 +1,5 @@
 /.idea
-raw_data/
+*raw_data/
 data/
 *.npy
 *.ipynb

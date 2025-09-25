@@ -11,7 +11,7 @@ BASE_URL = 'https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/'
 def get_img_src(session: requests.Session) -> str:
     res = session.get(BASE_URL)
     soup = BeautifulSoup(res.text, 'lxml')
-    img = soup.select_one('.input_box + img')
+    img = soup.select_one('.inputtext ~ img')
     return img['src']
 
 

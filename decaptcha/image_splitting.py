@@ -7,6 +7,8 @@ import numpy as np
 
 
 def split(raw_img: np.ndarray, label: str, digits: int = 6) -> List[Tuple[np.ndarray, int]]:
+    max_valid_w = 100
+    raw_img = raw_img[:, :max_valid_w, :]
     h, w, c = raw_img.shape
     w_per_digit = w // digits
     split_points = list(range(0, w, w_per_digit))
